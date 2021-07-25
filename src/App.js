@@ -11,8 +11,9 @@ const App = () => {
 
   // Face Detect States/Variables
   let convertedImgWidth = window.innerWidth/2;
-  while (convertedImgWidth > 450) {
-    convertedImgWidth = convertedImgWidth - 1
+
+  while (convertedImgWidth > 400) {
+    convertedImgWidth = convertedImgWidth - 10
   }
 
   const [faceInputField, setFaceInputField] = useState({
@@ -118,7 +119,7 @@ const App = () => {
       setConvertedUrl({
         url: converted_url
       })
-    }, 2000)
+    }, 4000)
   };
 
   const detectFaces = () => {
@@ -159,6 +160,10 @@ const App = () => {
               faces: faces
             });
 
+            if (faces.length === 0) {
+              alert("Puede ser que su pantalla es muy chica de acuerdo a la imagen seleccionada, por lo cual no puede detectar caras!")
+            }
+
             setFoundFaces({
               found: true
             });
@@ -172,6 +177,7 @@ const App = () => {
             alert("Algo ocurrio! Vuelve a intentar con otro imagen url")
           })
     }
+
     // eslint-disable-next-line
   }, [convertedUrl]);
 
