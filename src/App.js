@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from 'react';
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Kraken from 'kraken';
+import './App.css'
 
 const App = () => {
   // Creditos: Jerson Castro, Renzo (Renato) Ugarte e Isaiah (Isaias) Cedano.
-
 
   // Face Detect States/Variables
   let convertedImgWidth = window.innerWidth/2;
@@ -212,11 +212,7 @@ const App = () => {
               <tr>
                 <th>
                   <button type="button" className="btn btn-secondary"
-                          onClick={detectFaces} style={{
-                    color: "#fff",
-                    backgroundColor: "#6c757d",
-                    borderColor: "#6c757d",
-                  }}>Detectar</button>
+                          onClick={detectFaces}>Detectar</button>
                   {
                     foundFaces.found ?
                         <FaceRecognition imageUrl={convertedUrl.url} boxes={detectedFaces.faces}/> :
