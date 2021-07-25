@@ -189,8 +189,8 @@ const App = () => {
             <table className="table table-hover text-center">
               <thead>
               <tr>
-                <th scope="col">Detector de rostros</th>
-                <th scope="col">Text-to-Speech</th>
+                <th scope="col">Detector de Rostros</th>
+                <th scope="col">Texto a Declaracion</th>
               </tr>
               </thead>
 
