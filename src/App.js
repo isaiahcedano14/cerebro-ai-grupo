@@ -4,12 +4,14 @@ import NotesList from './components/NoteList';
 import CreateNote from './components/CreateNote';
 import CreateUser from './components/CreateUser';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 
-function App() {
-  return (
-      <Router>
-        <Navigation />
-        {/* <div class>
+class App extends React.Component {
+  render() {
+    return (
+        <Router>
+          <Navigation />
+          {/* <div class>
         <div class="row" >
           <div class="col-md-1"><br></br></div>
           <div class="col-md-10" ><br></br></div>
@@ -36,47 +38,48 @@ function App() {
       </div> */}
 
 
-        <div className="page-item container-fluid container_exp">
-          <div className="container my-4">
-            <div className="text-center">
-              <h3 className="card-title tittle-register">Bienvenido</h3>
+          <div className="page-item container-fluid container_exp">
+            <div className="container my-4">
+              <div className="text-center">
+                <h3 className="card-title tittle-register">Bienvenido</h3>
+              </div>
+            </div>
+
+            <div className="card">
+              <table className="table table-hover text-center">
+                <thead>
+                <tr>
+                  <th scope="col">Detector de rostros</th>
+                  <th scope="col">Text-to-Speech</th>
+                </tr>
+                </thead>
+
+                <tr>
+                  <th scope="col" >
+                    <input type="text"
+                           className="form-control" placeholder="Url">
+                    </input>
+                  </th>
+                  <th scope="col">
+                    <input type="text"
+                           className="form-control" placeholder="Ingrese texto">
+                    </input>
+                  </th>
+                </tr>
+                <br></br>
+                <tr>
+                  <th>
+                    <button type="button" className="btn btn-secondary">Detectar</button>
+                  </th>
+                  <button type="button" className="btn btn-secondary">Convertir</button>
+                  <br></br>
+                </tr>
+              </table>
             </div>
           </div>
-
-          <div className="card">
-            <table className="table table-hover text-center">
-              <thead>
-              <tr>
-                <th scope="col">Detector de rostros</th>
-                <th scope="col">Text-to-Speech</th>
-              </tr>
-              </thead>
-
-              <tr>
-                <th scope="col" >
-                  <input type="text"
-                         className="form-control" placeholder="Url">
-                  </input>
-                </th>
-                <th scope="col">
-                  <input type="text"
-                         className="form-control" placeholder="Ingrese texto">
-                  </input>
-                </th>
-              </tr>
-              <br></br>
-              <tr>
-                <th>
-                  <button type="button" className="btn btn-secondary">Detectar</button>
-                </th>
-                <button type="button" className="btn btn-secondary">Convertir</button>
-                <br></br>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </Router>
-  );
+        </Router>
+    );
+  }
 }
 
 export default App;
