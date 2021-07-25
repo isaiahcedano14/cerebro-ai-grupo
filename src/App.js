@@ -6,10 +6,12 @@ import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Kraken from 'kraken';
 
 const App = () => {
+  // Creditos: Jerson Castro, Renzo (Renato) Ugarte e Isaiah (Isaias) Cedano.
+
 
   // Face Detect States/Variables
   let convertedImgWidth = window.innerWidth/2;
-  while (convertedImgWidth > 300) {
+  while (convertedImgWidth > 450) {
     convertedImgWidth = convertedImgWidth - 1
   }
 
@@ -196,7 +198,7 @@ const App = () => {
                 <th scope="col" >
                   <input type="text" onChange={onFaceInputChange}
                          onKeyPress={onFaceKeyPress}
-                         className="form-control" placeholder="Url">
+                         className="form-control" placeholder="Url del imagen">
                   </input>
                 </th>
                 <th scope="col">
@@ -210,7 +212,11 @@ const App = () => {
               <tr>
                 <th>
                   <button type="button" className="btn btn-secondary"
-                          onClick={detectFaces}>Detectar</button>
+                          onClick={detectFaces} style={{
+                    color: "#fff",
+                    backgroundColor: "#6c757d",
+                    borderColor: "#6c757d",
+                  }}>Detectar</button>
                   {
                     foundFaces.found ?
                         <FaceRecognition imageUrl={convertedUrl.url} boxes={detectedFaces.faces}/> :
