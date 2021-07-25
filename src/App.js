@@ -36,15 +36,15 @@ function App() {
       </div> */}
 
 
-        <div class="page-item container-fluid container_exp">
-          <div class="container my-4">
-            <div class="text-center">
-              <h3 class="card-title tittle-register">Bienvenido</h3>
+        <div className="page-item container-fluid container_exp">
+          <div className="container my-4">
+            <div className="text-center">
+              <h3 className="card-title tittle-register">Bienvenido</h3>
             </div>
           </div>
 
-          <div class="card">
-            <table class="table table-hover text-center">
+          <div className="card">
+            <table className="table table-hover text-center">
               <thead>
               <tr>
                 <th scope="col">Detector de rostros</th>
@@ -67,9 +67,9 @@ function App() {
               <br></br>
               <tr>
                 <th>
-                  <button type="button" class="btn btn-secondary">Detectar</button>
+                  <button type="button" className="btn btn-secondary">Detectar</button>
                 </th>
-                <button type="button" class="btn btn-secondary">Convertir</button>
+                <button type="button" className="btn btn-secondary">Convertir</button>
                 <br></br>
               </tr>
             </table>
